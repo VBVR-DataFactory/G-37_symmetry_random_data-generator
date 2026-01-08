@@ -54,7 +54,13 @@ class TaskGenerator(BaseGenerator):
             self.config.min_scatter_size, 
             self.config.max_scatter_size
         )
-        color = random.choice(self.config.color_palette)
+        # Generate random RGB color (avoid too dark or too light colors for visibility)
+        # R, G, B each in range [50, 255] to ensure good visibility
+        color = (
+            random.randint(50, 255),
+            random.randint(50, 255),
+            random.randint(50, 255)
+        )
         
         # Generate initial scatter pattern on left half
         initial_scatter = self._generate_initial_scatter(grid_size, scatter_size)
@@ -135,14 +141,14 @@ class TaskGenerator(BaseGenerator):
         
         return symmetric_scatter
     
-    def _render_scatter(self, scatter: Set[Tuple[int, int]], grid_size: int, color: str, show_grid: bool = False) -> Image.Image:
+    def _render_scatter(self, scatter: Set[Tuple[int, int]], grid_size: int, color: Tuple[int, int, int], show_grid: bool = False) -> Image.Image:
         """
         Render the scatter pattern on a grid canvas.
         
         Args:
             scatter: Set of (row, column) coordinates for the scatter pattern
             grid_size: Size of the grid (number of squares per side)
-            color: Color for the scatter squares
+            color: Color for the scatter squares (RGB tuple)
             show_grid: Whether to show the grid lines
             
         Returns:
