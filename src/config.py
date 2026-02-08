@@ -43,7 +43,7 @@ class TaskConfig(GenerationConfig):
     )
     
     video_fps: int = Field(
-        default=30,  # Higher FPS for smoother animation
+        default=16,  # Higher FPS for smoother animation
         description="Video frame rate"
     )
     
