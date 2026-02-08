@@ -1,0 +1,1 @@
+The scene shows a grid with a random scatter pattern on the left half. Expand the scatter pattern symmetrically to the right half by mirroring it across the vertical axis, creating a complete symmetric pattern.
