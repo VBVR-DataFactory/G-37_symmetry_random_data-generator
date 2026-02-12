@@ -78,9 +78,9 @@ The scene shows a grid with a random scatter pattern on the left half. Expand th
 
 <table>
 <tr>
-  <td align="center"><img src="samples/G-37_first_0.png" width="200"/></td>
-  <td align="center"><img src="samples/G-37_video_0.gif" width="200"/></td>
-  <td align="center"><img src="samples/G-37_final_0.png" width="200"/></td>
+  <td align="center"><img src="samples/G-37_first_0.png" width="250"/></td>
+  <td align="center"><img src="samples/G-37_video_0.gif" width="400"/></td>
+  <td align="center"><img src="samples/G-37_final_0.png" width="250"/></td>
 </tr>
 <tr>
   <td align="center"><b>Initial Frame</b><br/>Random scatter on left half of grid</td>
