@@ -80,13 +80,27 @@ class TaskGenerator(BaseGenerator):
         # Select prompt
         prompt = get_prompt("scatter")
         
+        # Build task_data dict from parameters
+        # Only include task-specific parameters (removed signature, derivable symmetric_scatter)
+        task_data = {
+            "color": color,
+            "grid_size": grid_size,
+            "scatter_size": scatter_size,
+            "initial_scatter": sorted(list(initial_scatter)),  # Convert set to sorted list for consistency
+        }
+
+        metadata = self._build_metadata(task_id, task_data)
+        
+        
+        
         return TaskPair(
             task_id=task_id,
             domain=self.config.domain,
             prompt=prompt,
             first_image=first_image,
             final_image=final_image,
-            ground_truth_video=video_path
+            ground_truth_video=video_path,
+            metadata=metadata
         )
     
     # ══════════════════════════════════════════════════════════════════════════
