@@ -73,7 +73,6 @@ python examples/generate.py --num-samples 50 --no-videos
 ```
 The scene shows a grid with a random scatter pattern on the left half. Expand the scatter pattern symmetrically to the right half by mirroring it across the vertical axis, creating a complete symmetric pattern.
 ```
-
 ### Visual
 
 <table>
@@ -118,12 +117,14 @@ Create a vertically symmetric pattern by mirroring a random scatter from one hal
 ## 📦 Data Format
 
 ```
-data/questions/symmetry_random_task/symmetry_random_0001/
-├── first_frame.png          # Grid with scatter on left half
-├── final_frame.png          # Complete symmetric scatter pattern
-├── prompt.txt               # Symmetry expansion instruction
-└── ground_truth.mp4         # Animation of mirroring process
+data/questions/symmetry_random_task/symmetry_random_00000000/
+├── first_frame.png      # Grid with scatter on left half
+├── final_frame.png      # Complete symmetric scatter pattern
+├── prompt.txt           # Symmetry expansion instruction
+├── ground_truth.mp4     # Animation of mirroring process
+└── question_metadata.json # Task metadata
 ```
+
 
 **File specifications:**
 - **Images**: 1024×1024 PNG format
