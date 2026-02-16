@@ -12,7 +12,7 @@ Each sample pairs a **task** (first frame + prompt describing what needs to happ
 |----------|-------|
 | **Task ID** | G-37 |
 | **Task** | Symmetry Random |
-| **Category** | Visual Reasoning |
+| **Category** | Abstraction |
 | **Resolution** | 1024×1024 px |
 | **FPS** | 16 fps |
 | **Duration** | ~3 seconds |
